@@ -1,0 +1,71 @@
+<p class="title">
+	<span class="glyphicon glyphicon-leaf" style="margin-right: 5px;"></span>  <span style="color: #bbb;">\</span> 单据查询 
+	<input type="radio" name="isStock" value="true" checked>进货单
+	<input type="radio" name="isStock" value="false">退货单
+	<button class="btn btn-primary btn-xs" style="float: right;margin-left: 10px;" onclick="clearStatistics()">清空统计</button>
+	<span style="margin-left: 10px;float: right;" id="money-statistics">0</span>
+	<span style="float: right;margin-right: 10px;">已查看的单据金额统计：</span>
+	<span style="float: right;margin-right: 30px;">共<span id="item-number">0</span>条记录</span>			
+</p>
+<p class="title">
+	<span style="margin-right: 10px;">起始日期：</span>
+	<input id="start" size="16" type="text" readonly class="form_datetime form-control" style="width:100px;display:inline-block;">	
+	<span style="margin-right: 10px; margin-left: 10px;">截止日期：</span>
+	<input id="end" size="16" type="text" readonly class="form_datetime form-control" style="width:100px;display:inline-block;">		
+	<span>单据编号：</span>
+	<input id="code" size="16" type="text" class="form-control" style="width:200px;display:inline-block;">	
+	<span>仓库：</span>
+	<select id="warehouse" class="form-control" style="width: 200px;display:inline-block">
+		<option value="">下拉选择一个仓库</option>
+	</select>
+	<button class="btn btn-warning"  id="reset" style="float: right;height: 35px;margin-left: 5px">重置</button>
+	<button class="btn btn-primary"  id="search" style="float: right;height: 35px;">查询</button>
+</p>
+<div class="showInfo show">
+	<table class="table table-hover" id="purchase-arrival">
+		<thead>
+			<tr>
+				<th>仓库</th>
+				<th>单据编号</th>
+				<th>单据日期</th>
+				<th>金额</th>		
+				<th>明细</th> 
+			</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+</div>
+<div class="modal fade" id="purchase-arrival-details-modal" tabindex="-1">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header modal-header-purple">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">进货明细</h4>
+			</div>
+			<div class="modal-body">
+				<table class="table table-hover" id="purchase-arrival-details">
+					<thead>
+						<tr>
+							<th>商品名称</th>
+							<th>商品单位</th>
+							<th>商品单价</th>
+							<th>商品数量</th>
+							<th>商品金额</th>
+							<th>仓库</th>	
+							<th>是否赠品</th>		
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="public/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="public/js/locales/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+<script type='text/javascript' src='/SevenStars/dwr/interface/WarehouseManager.js'></script>
+ <script type='text/javascript' src='/SevenStars/dwr/interface/PurchaseArrivalManager.js'></script>
+<script type="text/javascript" src="public/js/purchaseArrival.js"></script>

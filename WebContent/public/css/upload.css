@@ -1,0 +1,49 @@
+.panel,.panel-footer
+{
+	margin-bottom: 0px;
+}
+
+#submit
+{
+	float: left;
+	width: 250px;
+}
+
+#finished
+{
+	float: left;
+	display: none;
+	width: 250px;
+}
+
+#tip
+{
+	float: right;
+	margin-top: 5px;
+}
+
+#file_upload
+{
+	float: right;
+	color: blue;
+	display: none;
+}
+
+#file_upload-queue
+{
+	float: right;
+	margin-top: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+	color: blue;
+}
+
+.cancel
+{
+	float: right;
+}
+
+.panel-footer
+{
+	height: 55px;
+}

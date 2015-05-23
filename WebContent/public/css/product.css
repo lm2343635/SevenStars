@@ -1,0 +1,37 @@
+.glyphicon-search
+{
+	cursor: pointer;
+}
+
+.glyphicon-search:hover
+{
+	color: #cecece;
+}
+
+.searchBar
+{
+	display: none;
+}
+
+.first-level
+{
+	background-color: rgb(240,240,240);
+	cursor: pointer;
+}
+
+.second-level
+{
+	background-color: rgb(250,250,250);
+	display:none;
+	cursor: pointer;
+}
+
+.number-info
+{
+	float: right;
+}
+
+.product
+{
+	display: none;
+}

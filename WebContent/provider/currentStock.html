@@ -1,0 +1,32 @@
+<p class="title">
+	<span class="glyphicon glyphicon-leaf" style="margin-right: 5px;"></span>  <span style="color: #bbb;">\</span> 库存查询
+</p>
+<p class="title">
+	<span>仓库：</span>
+	<select id="warehouse" class="form-control" style="width: 200px;display:inline-block">
+		<option value="">下拉选择一个仓库</option>
+	</select>
+	<button class="btn btn-warning"  id="reset" style="float: right;height: 35px;margin-left: 5px">重置</button>
+	<button class="btn btn-primary"  id="search" style="float: right;height: 35px;">查询</button>
+</p>
+<div class="showInfo show">
+	<table class="table table-hover" id="current-stock">
+		<thead>
+			<tr>
+				<th>商品条码</th>
+				<th>商品名称</th>
+				<th>商品规格</th>
+				<th>数量</th>		
+				<th>仓库</th> 
+			</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+</div>
+<script type="text/javascript" src="public/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="public/js/locales/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+<script type='text/javascript' src='/SevenStars/dwr/interface/WarehouseManager.js'></script>
+ 	<script type='text/javascript' src='/SevenStars/dwr/interface/CurrentStockManager.js'></script>
+<script type="text/javascript" src="public/js/currentStock.js"></script>
+
+</html>

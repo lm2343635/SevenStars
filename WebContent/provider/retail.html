@@ -1,0 +1,34 @@
+<p class="title">
+	<span class="glyphicon glyphicon-leaf" style="margin-right: 5px;"></span>  <span style="color: #bbb;">\</span> 销售查询
+</p>
+<p class="title">
+	<span style="margin-right: 10px;">起始日期：</span>
+	<input id="start" size="16" type="text" readonly class="form_datetime form-control" style="width:100px;display:inline-block;">	
+	<span style="margin-right: 10px; margin-left: 10px;">截止日期：</span>
+	<input id="end" size="16" type="text" readonly class="form_datetime form-control" style="width:100px;display:inline-block;">		
+	<span>仓库：</span>
+	<select id="warehouse" class="form-control" style="width: 200px;display:inline-block">
+		<option value="">下拉选择一个仓库</option>
+	</select>
+	<button class="btn btn-warning"  id="reset" style="float: right;height: 35px;margin-left: 5px">重置</button>
+	<button class="btn btn-primary"  id="search" style="float: right;height: 35px;">查询</button>
+</p>
+<div class="showInfo show">
+	<table class="table table-hover" id="retail">
+		<thead>
+			<tr>
+				<th>仓库</th>
+				<th>商品条码</th>
+				<th>商品名称</th>
+				<th>商品规格</th>
+				<th>数量</th>		
+			</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+</div>
+<script type="text/javascript" src="public/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="public/js/locales/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+<script type='text/javascript' src='/SevenStars/dwr/interface/WarehouseManager.js'></script>
+ 	<script type='text/javascript' src='/SevenStars/dwr/interface/RetailManager.js'></script>
+<script type="text/javascript" src="public/js/retail.js"></script>

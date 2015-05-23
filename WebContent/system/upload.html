@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>上传文件</title>
+		<script type="text/javascript" src="public/js/upload.js"></script>
+		<link rel="stylesheet" href="public/css/upload.css">
+	</head>
+	<body>
+		<p class="title">
+			<span class="glyphicon glyphicon-leaf" style="margin-right: 5px;"></span>  <span style="color: #bbb;">\</span> 上传文件
+		</p>
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<input id="title-input"  type="text" class="form-control" placeholder="请在此填写标题">
+			</div>
+			<div class="panel-body">
+				<textarea id="content-input"  class="form-control" placeholder="请在此填写内容"></textarea>
+			</div>
+			<div class="panel-footer">
+				<button id="submit" class="btn btn-primary">提交标题和内容</button>
+				<button id="finished" class="btn btn-primary">提交完成，请点击右侧按钮上传文件</button>
+				<input id="file_upload" name="file_upload"  type="file" multiple="true">
+				<p id="tip">（请提交完标题和内容再上传文件，文件大小小于4MB，上传完成后继续点击上传覆盖原文件！）</p>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,11 @@
+.dcontent
+{
+	color: blue;
+	cursor: pointer;
+}
+
+.glyphicon:hover
+{
+	cursor: pointer;
+	color: #cecece;
+}

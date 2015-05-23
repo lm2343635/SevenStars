@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC 
+	"-//GetAhead Limited//DTD Direct Web Remoting 3.0//EN"
+	"http://getahead.org/dwr/dwr30.dtd">
+<dwr>
+	<allow>
+		<create creator="new" javascript="PurchaseArrivalManager"> 
+			<param name="class" value="com.xwkj.sevenstars.service.PurchaseArrivalManager"/>
+		</create>
+		<create creator="new" javascript="PurchaseOrderManager"> 
+			<param name="class" value="com.xwkj.sevenstars.service.PurchaseOrderManager"/>
+		</create>
+		<create creator="new" javascript="WarehouseManager"> 
+			<param name="class" value="com.xwkj.sevenstars.service.WarehouseManager"/>
+		</create>
+		<create creator="new" javascript="CurrentStockManager"> 
+			<param name="class" value="com.xwkj.sevenstars.service.CurrentStockManager"/>
+		</create>
+		<create creator="new" javascript="RetailManager"> 
+			<param name="class" value="com.xwkj.sevenstars.service.RetailManager"/>
+		</create>
+		<create creator="new" javascript="GoodStockManager"> 
+			<param name="class" value="com.xwkj.sevenstars.service.GoodStockManager"/>
+		</create>
+		<create creator="new" javascript="UserManager"> 
+			<param name="class" value="com.xwkj.sevenstars.service.UserManager"/>
+		</create>
+		
+		<!-- 定义使用Bean转换器处理如下Java类 -->
+		<convert match="com.xwkj.sevenstars.bean.PurchaseArrival" converter="bean"/>
+		<convert match="com.xwkj.sevenstars.bean.PurchaseArrivalDetail" converter="bean"/>
+		<convert match="com.xwkj.sevenstars.bean.PurchaseOrder" converter="bean"/>
+		<convert match="com.xwkj.sevenstars.bean.PurchaseOrderDetail" converter="bean"/>
+		<convert match="com.xwkj.sevenstars.bean.Warehouse" converter="bean"/>
+		<convert match="com.xwkj.sevenstars.bean.CurrentStock" converter="bean"/>
+		<convert match="com.xwkj.sevenstars.bean.Retail" converter="bean"/>
+		<convert match="com.xwkj.sevenstars.bean.GoodStock" converter="bean"/>
+		<convert match="com.xwkj.sevenstars.bean.DateTime" converter="bean"/>
+		<convert match="com.xwkj.sevenstars.bean.User" converter="bean"/>
+		<convert match="com.xwkj.sevenstars.bean.FirstLeveal" converter="bean"/>
+	</allow>
+</dwr>

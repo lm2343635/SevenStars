@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>七颗星加盟店</title>
+	<link rel="Shortcut Icon" href="public/imgs/favicon.ico">
+	<link rel="public/css/stylesheet" type="text/css" href="public/css/uploadify.css"> 
+	<link rel="stylesheet" href="public/css/bootstrap.css">
+	<link rel="stylesheet" href="public/css/main.css">
+	<link rel="stylesheet" href="public/css/pop-box.css">
+	<link rel="stylesheet" href="public/css/bootstrap-datetimepicker.min.css" media="screen">
+	<script src="public/js/jquery.js"></script>
+	<script src="public/js/jquery.uploadify.min.js"></script>
+	<script src="public/js/bootstrap.js"></script>
+	<script src="public/js/tool.js"></script>
+	<script src="public/js/main.js"></script>
+	<script src="public/js/userInfo.js"></script>
+</head>
+<body>
+	<div id="mask"></div>
+	<div id="nav">
+		<h1 id="title">荆门市七颗星物流有限公司物流管理系统——七颗星加盟店</h1>	
+		<div id="user">
+			<div class="btn-group">
+			  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="background:transparent;color:#fff;">
+			    <span id="uname"></span> <span class="caret"></span>
+			  </button>
+			  <ul class="dropdown-menu">
+			    <li><a href="javascript:void(0)"  onclick="userInfo()">资料</a></li>
+			    <li><a href="SessionServlet?task=remove">注销</a></li>
+			  </ul>
+			</div>
+		</div>
+	</div>
+	<div id="sidebar">
+		<ul id="menu">
+			<li style="border-top: 1px solid #ccc;">
+				<a href="#"><span class="glyphicon glyphicon-folder-open"></span> 查询管理</a>
+				<ul class="menu-list">
+					<li id="li-product"><a href="product/goodStock.html" >库存查询</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#"><span class="glyphicon glyphicon-cog"></span> 系统管理</a>
+				<ul class="menu-list">
+					<li id="li-notification"><a href="javascript:void(0)"  onclick="loading('system/notification.jsp')">通知管理</a></li>
+					<li id="li-message-answered"><a href="javascript:void(0)"  onclick="loading('system/messageAnswered.jsp')">已回答留言</a></li>
+					<li id="li-message-unanswered"><a href="javascript:void(0)"  onclick="loading('system/messageUnAnswered.jsp')">未回答留言</a></li>
+					<li id="li-add-message"><a href="javascript:void(0)"  onclick="addNewMessage()">新增留言</a></li>
+					<li id="li-upload"><a href="javascript:void(0)"  onclick="loading('system/upload.html')">上传文件</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div id="content" ></div>
+	<div class="pop-mask"></div>
+	<div class="pop-box" id="userInfo">
+		<div class="pop-title"></div>
+		<div class="pop-content" style="padding: 10px;">
+			<div class="uid">加盟商编号：<span class="userInfo-content"></span></div>
+			<div class="uname">加盟商姓名：<span class="userInfo-content"></span></div>
+			<div class="password">加盟商密码：<span class="userInfo-content"></span></div>
+			<div id="modifyPassword">
+				<button id="modiPass-btn" class="btn btn-default btn-sm" style="width:280px;" onclick="modifyPassword()">修改密码</button>
+				<div id="modiPass-success">修改成功！</div>
+				<div id="modiPass-fail">修改失败，请重试！！</div>
+				<div id="modiPass-input">
+					新密码：<input type="password" class="form-control input-sm" id="new-password">
+					重复密码：<input type="password" class="form-control input-sm" id="repeat-new-password">
+					<button id="modiPass-submit" class="btn btn-default btn-sm" style="width:90px;">确定</button>
+					<button id="modiPass-reset" class="btn btn-default btn-sm" style="width:90px;" onclick="$(this).siblings('input').val('');">重置</button>
+					<button id="modiPass-cancel" class="btn btn-default btn-sm" style="width:90px;">取消</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="pop-box" id="notification">
+		<div class="pop-title"><p></p></div>
+		<div class="pop-content"><pre></pre></div>
+	</div>
+	<div id="add-new-message"></div>
+	<div class="pop-box" id="loading">
+		<div class="pop-title">页面正在加载</div>
+		<div class="pop-content">
+			<center><img src="public/imgs/loading.gif"></center>
+			<center><h5>页面正在加载，请稍等。。。</h5><center>
+		</div>
+	</div>
+</body>
+</html>

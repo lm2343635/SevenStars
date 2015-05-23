@@ -1,0 +1,30 @@
+<p class="title">
+	<span class="glyphicon glyphicon-leaf" style="margin-right: 5px;"></span>  <span style="color: #bbb;">\</span> 库存查询	
+</p>
+<p class="title">
+	搜索商品名称：<input id="name" size="16" type="text" class="form-control" style="width:150px;display:inline-block;">	
+	<button class="btn btn-warning"  id="reset" style="float: right;height: 35px;margin-left: 5px">重置</button>
+	<button class="btn btn-primary"  id="search" style="float: right;height: 35px;">查询</button>
+	<span>搜索商品分类：</span>
+	<select id="first-leveal" class="form-control" style="width: 200px;display:inline-block">
+		<option value="">下拉选择一个分类</option>
+	</select>
+</p>
+<div class="showInfo show">
+	<table class="table table-hover"  id="good-stock">
+		<thead>
+			<tr class="head-tr">
+				<th>商品条码</th>
+				<th>商品编号</th>
+				<th>商品名称</th>
+				<th>规格</th>
+				<th>单价</th>
+				<th>库存</th>		
+				<th>备注</th>
+		</thead>
+		<tbody></tbody>
+	</table>
+</div>
+<script src='/SevenStars/dwr/engine.js'></script>
+<script src='/SevenStars/dwr/interface/GoodStockManager.js'></script>
+<script src="public/js/goodStockMultiple.js"></script>

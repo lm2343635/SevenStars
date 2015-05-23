@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>设置用友数据库连接</title>
+	<script type="text/javascript" src="public/js/url.js"></script>
+</head>
+<body>
+	<p class="title">
+		<span class="glyphicon glyphicon-leaf" style="margin-right: 5px;"></span>  <span style="color: #bbb;">\</span> 设置数据库连接	
+	</p>
+	<div class="showInfo show">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>名称</th>
+					<th>值</th>
+					<th>修改</th>
+					<th>确认</th>		
+			</thead>
+			<tbody>
+				<tr>
+					<td>用友SQLServer数据库服务器地址</td>
+					<td><span id="ip-disp"></span></td>
+					<td><input id="ip-input" size="16" type="text" class="form-control" style="width:200px;"></td>
+					<td><button class="btn btn-primary btn-xs"  onclick="modifyUrl(0)" style="height: 35px;">确认更改</button></td>
+				</tr>
+				<tr>
+					<td>用友SQLServer数据库端口号</td>
+					<td><span id="port-disp"></span></td>
+					<td><input id="port-input" size="16" type="text" class="form-control" style="width:200px;"></td>
+					<td><button class="btn btn-primary btn-xs"  onclick="modifyUrl(1)" style="height: 35px;">确认更改</button></td>
+				</tr>
+				<tr>
+					<td>用友数据库名称</td>
+					<td><span id="dbName-disp"></span></td>
+					<td><input id="dbName-input" size="16" type="text" class="form-control" style="width:200px;"></td>
+					<td><button class="btn btn-primary btn-xs"  onclick="modifyUrl(2)" style="height: 35px;">确认更改</button></td>
+				</tr>
+				<tr>
+					<td>用友数据库用户名</td>
+					<td><span id="userName-disp"></span></td>
+					<td><input id="userName-input" size="16" type="text" class="form-control" style="width:200px;"></td>
+					<td><button class="btn btn-primary btn-xs"  onclick="modifyUrl(3)" style="height: 35px;">确认更改</button></td>
+				</tr>	
+				<tr>
+					<td>用友数据库密码</td>
+					<td><span id="password-disp"></span></td>
+					<td><input id="password-input" size="16" type="text" class="form-control" style="width:200px;"></td>
+					<td><button class="btn btn-primary btn-xs"  onclick="modifyUrl(4)" style="height: 35px;">确认更改</button></td>
+				</tr>					
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
